@@ -129,3 +129,4 @@ yarn.lock
 v8-compile-cache-*
 
 dist/**/*.js.map
+dist/
