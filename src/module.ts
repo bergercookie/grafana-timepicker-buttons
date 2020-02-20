@@ -8,7 +8,9 @@ export class TimepickerBtnCtrl extends MetricsPanelCtrl {
   static templateUrl = "partials/timepicker-btns.html";
   static scrollable = true;
 
-  panelDefaults: any = { transform: "timeseries_to_columns" };
+  panelDefaults: any = {
+    transform: "timeseries_to_columns"
+  };
 
   /** @ngInject */
   constructor($scope: any, $injector: any) {
@@ -68,6 +70,7 @@ export class TimepickerBtnCtrl extends MetricsPanelCtrl {
             this.elements.timepickerBtnTemplate
               .clone()
               .removeAttr("id")
+              .css({ "font-weight": "Bold", "font-size": "150%" })
               .data("time-from", btn_metadata.time_from)
               .data("time-to", btn_metadata.time_to)
               .text(btn_metadata.button_text)
@@ -78,7 +81,9 @@ export class TimepickerBtnCtrl extends MetricsPanelCtrl {
         });
       });
 
-      if (!valid_data) { this.noDataReceived(); }
+      if (!valid_data) {
+        this.noDataReceived();
+      }
     }
   }
 
