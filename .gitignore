@@ -123,9 +123,6 @@ bower_components
 .DS_Store
 Thumbs.db
 
-# ignore yarn.lock
-yarn.lock
-
 v8-compile-cache-*
 
 dist/**/*.js.map
